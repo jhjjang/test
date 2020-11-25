@@ -30,6 +30,14 @@ jobs:
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
+
+    - name: Show python enviroment
+      run:
+        python --version
+        python -m pip list
+    
+    - name: Install plugins
+      run: lektor plugins reinstall
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
