@@ -1,2 +1,2 @@
 1
-submodule test1
+submodule test2
